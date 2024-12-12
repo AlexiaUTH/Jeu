@@ -1,0 +1,23 @@
+#cible{
+    width: 150px; height: 150px;
+    background-color: red;
+    border-radius: 50%;
+    position: fixed; /* Les scrolls-bar ne s'affichent pas */
+    transform: translate(-50%,-50%);
+    transition: opacity 0.5s, width 0.25s, height 0.25s;
+    
+    /*Le positionnement de la cible sera géré par JS*/
+    top: 50%; 
+    left: 50%;
+    
+}
+
+#cible.invisible{
+    opacity: 0;
+    width: 0; height: 0;
+}
+
+#affichage_score {
+    position: fixed;
+    z-index: 1; /* Force de la zone d'affichage de score à être affichée "par-dessus" la cible (qui a par défaut un z-index de 0 */
+}
