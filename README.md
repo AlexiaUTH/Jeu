@@ -1,1 +1,1 @@
-# ACCEDER AU JEU : https://alexiauth.github.io/accueil.html
+# ACCEDER AU JEU : https://alexiauth.github.io/Jeu/accueil.html
