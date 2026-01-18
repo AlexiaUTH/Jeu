@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Police Google Fonts - Fredoka -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Jeu : Apple Shoot !</title>
+</head>
+<body>
+    
+<div id="container">
+    <div id="score-box" class="fredoka-font">
+        Score :
+        <span id="affichage_score">0</span>
+    </div>
+    <div id="rules-box" class="fredoka-font">
+        <h2>🎯 Règles du jeu</h2>
+        <ul>
+            <li>Clique sur la pomme 🍎</li>
+            <li>+1 point par pomme touchée</li>
+            <li>La pomme disparaît vite !</li>
+        </ul>
+    </div>
+    <a id="btn-home" class="fredoka-font" href="index.html">Retour à l'accueil</a>
+
+    <div id="cible" class="invisible apple">
+        <div class="invisible stem"></div>
+        <div class="invisible leaf"></div>
+    </div>
+
+</div>
+
+    <script src="scripts.js"></script>
+
+</body>
+</html>

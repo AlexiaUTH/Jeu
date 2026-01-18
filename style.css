@@ -1,0 +1,238 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+/* Page Accueil */
+
+.fredoka-font {
+    font-family: "Fredoka", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+#container{
+    height: 100vh;
+    background-image: url(image/foret.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+h1{
+    display: flex;
+    justify-content:center;
+    align-self: center;
+    font-size: 4em;
+    color: #10660e;
+}
+
+#bouton-design{
+    background-color:#fb4921;
+    border: solid white 5px;
+    height: 50px;
+    width: 100px;
+    border-radius: 30px;
+    color: white;
+}
+
+.bouton-texte{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.image{
+    display: flex;
+    padding-top: 100px;
+    height: 200px;
+}
+
+/* Page Jeu */
+
+.apple {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 50px;
+    z-index: 1;
+    /* Cible à l'intérieur */
+    background: radial-gradient(circle,
+            red 0%,
+            red 10%,
+            white 10%,
+            white 20%,
+            red 20%,
+            red 30%,
+            white 30%,
+            white 40%,
+            red 40%,
+            red 50%);
+}
+
+/* Reflet */
+.apple::before {
+    position: absolute;
+    top: 20px;
+    left: 25px;
+    width: 30px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+}
+
+/* Tige */
+.stem {
+    position: absolute;
+    top: -25px;
+    left: 55px;
+    width: 10px;
+    height: 30px;
+    background: #5b3a1e;
+    border-radius: 5px;
+}
+
+/* Feuille */
+.leaf {
+    position: absolute;
+    top: -15px;
+    left: 70px;
+    width: 35px;
+    height: 20px;
+    background: green;
+    border-radius: 0 50% 50% 50%;
+    transform: rotate(25deg);
+}
+
+/* Cible */
+
+#cible {
+    width: 120px;
+    height: 120px;
+    position: fixed;
+    /* Les scrolls-bar ne s'affichent pas */
+    transform: translate(-50%, -50%);
+    transition: opacity 0.5s, width 0.25s, height 0.25s;
+    top: 50%;
+    left: 50%;
+}
+
+#cible.invisible {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Affichage Score */
+
+#score-box {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding:  10px 50px 10px 50px;
+
+    background: rgba(255, 0, 0, 0.317);
+    border: 3px solid #ff2f00;
+    border-radius: 20px;
+
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #10660e;
+
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+    z-index: 10;
+}
+
+#affichage_score {
+    position: fixed;
+        z-index: 3;
+        /* Force de la zone d'affichage de score à être affichée "par-dessus" la cible (qui a par défaut un z-index de 0 */
+    padding-left: 10px;
+    color: #ff0000;
+    font-size: 26px;
+}
+
+/* Regles du Jeu */
+
+#rules-box {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+
+    width: 240px;
+    padding: 15px 20px;
+
+    background: #0f660e5e;
+    border: 3px solid #10660e;
+    border-radius: 20px;
+
+    color: #094d08;
+    font-size: 0.95rem;
+
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+    z-index: 10;
+}
+
+#rules-box h2 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #ff2f00;
+    text-align: center;
+}
+
+#rules-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#rules-box li {
+    margin-bottom: 6px;
+    padding-left: 18px;
+    position: relative;
+}
+
+#rules-box li::before {
+    position: absolute;
+    left: 0;
+}
+
+/* Bouton Retour Accueil */
+
+#btn-home {
+    position: fixed;
+    bottom: 20px;
+    /* en bas de l'écran */
+    right: 20px;
+    /* coin droit */
+
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+
+    background-color: #fb4921;
+    /* rouge pomme */
+    color: white;
+    border: 3px solid white;
+    border-radius: 30px;
+
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease;
+    z-index: 999;
+}
+
+#btn-home:hover {
+    background-color: #ff6347;
+    /* légèrement plus clair au survol */
+    transform: scale(1.05);
+}
